@@ -1,0 +1,22 @@
+# Responsive Layout & Interactive Actions Documentation
+
+## 1. Grid & Responsiveness Rules
+*   **Desktop Layout (1440px Frame):** Built on a strict 12-column grid system (Container width: 1200px, Margin: 120px, Gutter: 32px). Content is aligned to the left using an intentional layout structure to establish a strong vertical visual rhythm.
+*   **Mobile Layout (390px Frame):** Built on a responsive 2-column fluid grid system (Margin: 16px, Gutter: 16px). Total content bounding box is strictly limited to 358px wide.
+*   **Adaptation Mechanics:** Layout transforms from a 2-column structure (Desktop) into a seamless 1-column vertical stack (Mobile) using fluid Figma Auto Layout system. Components use "Fill container" horizontal resizing rules to naturally shrink down to 358px width while retaining text legibility without broken word wraps.
+
+## 2. Component Interactive States (UI Kit Actions)
+*   **Primary CTA Buttons & Contact Links:** 
+    *   *Default State:* Filled with brand accent emerald color (#3DDC5A) or styled as muted technical text (#B9C7BE).
+    *   *Hover State (Desktop):* Smoothly shifts to hover-accent green color (#6CF08A) or highlights text brightness to (#EEF4EF). 
+    *   *Active/Pressed State:* Subtle scale-down effect (98%) to provide tactile user feedback.
+*   **Mobile Navigation Header:** Desktop text links compress into a clean, minimalist hamburger menu icon (lucide:menu, 24x24px, #EEF4EF) on the right side of the screen, opening a mobile navigation overlay.
+
+## 3. URL Mapping & Action Triggers
+*   **Main Header Action Link:** The navigation element "Products" operates as a direct hyperlink mapped back to the master index page ("/"), fulfilling the dynamic requirement to return to the core product showcase.
+*   **Primary CTA Action Button ("Discuss Your Business Idea"):** Trigger mapped at the component-frame level to open the explicit WhatsApp API communication layer with pre-filled customer greeting intent:
+    *   *Target Link:* "https://wa.me/66984407304?text=Hello%21%20I%20would%20like%20to%20discuss%20SALES%20MANAGER%20for%20my%20business."
+*   **Footer Technical Contacts Infrastructure:**
+    *   *Email Text:* Mapped via strict protocol to "mailto:b2b.volodymyr.thai@gmail.com".
+    *   *Phone Text:* Mapped via automated global dialing protocol to "tel:+4550276439".
+    *   *WhatsApp Link:* Duplicates the dynamic "cta_url" message bridge to ensure seamless omni-channel intake optimization.
